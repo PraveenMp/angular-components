@@ -39,7 +39,7 @@
               <th>Gender</th>
             </tr>
           </thead>
-          <tbody *ngIf="!errorMessage">
+          <tbody>
             <tr *ngFor="let agent of pagedItems;let i=index">
               <th scope="row">{{i+1}}</th>
               <td>{{agent.first_name}}</td>
