@@ -1,0 +1,88 @@
+<div class="card">
+  <div class="card-header">
+    Title
+  </div>
+  <div class="card-block">
+    <h4 class="card-title">Page/Module specific title in angular</h4>
+    <p class="card-text">Steps</p>
+    <hr>
+    <p class="card-text">npm install --save underscore@1.8.3</p>
+    <p class="card-text">Step 1: Place pager service in your app</p>
+    <p class="card-text">Step 2: Add pager serivce to your module as provider</p>
+    <p class="card-text">Step 3: Declare Pagination service in your component </p>
+    <p class="card-text">Step 4: Define pager objects and initialize setPage method </p>
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#component" role="tab">OutPut</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#service" role="tab">Pager service.ts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#module" role="tab">component.ts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#index" role="tab">component.html</a>
+      </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div class="tab-pane active" id="component" role="tabpanel">
+        <table class="table table-bordered" style="margin:15px 0px;">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First name</th>
+              <th>Last name</th>
+              <th>Email</th>
+              <th>Gender</th>
+            </tr>
+          </thead>
+          <tbody *ngIf="!errorMessage">
+            <tr *ngFor="let agent of pagedItems;let i=index">
+              <th scope="row">{{i+1}}</th>
+              <td>{{agent.first_name}}</td>
+              <td>{{agent.last_name}}</td>
+              <td>{{agent.email}}</td>
+              <td>{{agent.gender}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <nav aria-label="Page navigation example">
+          <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+            <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item">
+              <a (click)="setPage(1)" class="page-link">First</a>
+            </li>
+            <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item">
+              <a (click)="setPage(pager.currentPage - 1)" class="page-link">Previous</a>
+            </li>
+            <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
+              <a (click)="setPage(page)" class="page-link">{{page}}</a>
+            </li>
+            <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item">
+              <a (click)="setPage(pager.currentPage + 1)" class="page-link">Next</a>
+            </li>
+            <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item">
+              <a (click)="setPage(pager.totalPages)" class="page-link">Last</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="tab-pane" id="service" role="tabpanel">
+        <pre><code highlight [textContent]="serviceCode">
+         </code></pre>
+      </div>
+      <div class="tab-pane" id="module" role="tabpanel">
+        <pre><code highlight [textContent]="componentTsCode">
+
+        </code></pre>
+      </div>
+      <div class="tab-pane" id="index" role="tabpanel">
+        <pre><code highlight [textContent]="componentHtmlCode">
+
+    </code></pre>
+      </div>
+    </div>
+  </div>
+</div>

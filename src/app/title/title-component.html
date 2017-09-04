@@ -1,0 +1,53 @@
+<div class="card">
+  <div class="card-header">
+    Title
+  </div>
+  <div class="card-block">
+    <h4 class="card-title">Page/Module specific title in angular</h4>
+    <p class="card-text">Steps</p>
+    <hr>
+    <p class="card-text">Step 1: Create title service file</p>
+    <p class="card-text">Step 2: Add title service in your module as a provider</p>
+    <p class="card-text">Step 3: Consume title service in your component </p>
+    <p class="card-text">Step 4: Using service pass the appropriate title </p>
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#component" role="tab">Your component </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#service" role="tab">Service</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#module" role="tab">Module</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#index" role="tab">Index.html</a>
+      </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div class="tab-pane active" id="component" role="tabpanel">
+        <pre><code highlight [textContent]="componentCode">
+      </code>
+    </pre>
+      </div>
+      <div class="tab-pane" id="service" role="tabpanel">
+        <pre><code highlight [textContent]="serviceCode">
+          </code>
+          </pre>
+      </div>
+      <div class="tab-pane" id="module" role="tabpanel">
+        <pre><code highlight [textContent]="moduleCode">
+
+          </code>
+          </pre>
+      </div>
+      <div class="tab-pane" id="index" role="tabpanel">
+        <pre><code highlight [textContent]="indexCode">
+          </code>
+          </pre>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  margin:0px 0px 15px 0px;
+  background-color: #e53935;
+  font-family: Roboto,Helvetica Neue,sans-serif;
+}
+
+pre {
+  background: black;
+  padding: 20px;
+  color: #fff;
+}
+.hljs-comment, .hljs-deletion, .hljs-meta {
+  color: #f1ce27 !important;
+}
+.list-group-item.active,.card-header {
+  background-color: #c62828;
+  color: #fff;
+  letter-spacing: 1px;
+  border-radius: 0px !important;
+  border-color:transparent;
+}
+.card {
+  border-radius: 0px;
+  border: none;
+}
+.header {
+  background: #c62828;
+  color: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+.github-logo {
+  text-align: right;
+}
+.github-logo > a {
+  color:#fff;
+  text-decoration: none;
+}
+.github-logo > a > img {
+  height: 38px;
+  width: 38px;
+  margin-right: 7px;
+}
